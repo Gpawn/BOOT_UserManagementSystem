@@ -1,0 +1,2 @@
+# BOOT_UserManagementSystem
+JavaEE实训项目，基于Bootstrap、Struts2、Spring、Hibernate的客户管理系统
