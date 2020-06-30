@@ -23,12 +23,14 @@
             <div class="row bottomblock">
                 <div class="form-group col-sm-10 col-sm-offset-2" style="margin-top:50px;">
                     <label class="col-sm-2 control-label col-sm-offset-2">账号：</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="RegUser"/>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="RegUser" aria-describedby="RegUserStatus"/>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <span id="RegUserStatus" class="sr-only">(success)</span>
                     </div>
                 </div>
                 <div class="form-group col-sm-10 col-sm-offset-2">
-                    <label class="col-sm-2 control-label col-sm-offset-2">用户名(昵称)：</label>
+                    <label class="col-sm-2 control-label col-sm-offset-2">昵称：</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="RegName"/>
                     </div>

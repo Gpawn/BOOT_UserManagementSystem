@@ -48,7 +48,7 @@
                 </div>
                 <div class="row" style="margin-top:160px;">
                     <div class="col-md-6 col-md-offset-3">
-                        <small class="text-center">还未注册？请在此<a href="#">注册</a></small>
+                        <small class="text-center">还未注册？请在此<a href="register.jsp">注册</a></small>
                     </div>
                 </div>
             </form>
