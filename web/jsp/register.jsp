@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/register.css">
-    <style>
-
-    </style>
 </head>
 <body>
 <script src="../js/jquery-3.5.1.min.js"></script>
@@ -23,7 +20,7 @@
             <div class="row bottomblock">
                 <div class="form-group col-sm-10 col-sm-offset-2" style="margin-top:50px;">
                     <label class="col-sm-2 control-label col-sm-offset-2">账号：</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" id="RegUser" aria-describedby="RegUserStatus"/>
                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <span id="RegUserStatus" class="sr-only">(success)</span>

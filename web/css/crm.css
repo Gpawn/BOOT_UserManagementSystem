@@ -1,0 +1,24 @@
+.bar{
+    height:50px;
+    background:#474A59;
+    color: #A9B2BA;
+    border-bottom: #3c3c3c 1px solid;
+    box-shadow: #000 15px 0px 20px;
+}
+.ver{
+    line-height: 30px;
+}
+.leftbox{
+    width:20%;
+    background: #F8F8F8;
+    height:900px;
+    border-right: #f7f7f7 1px solid;
+}
+.rightbox{
+    width:80%;
+    background: #ffffff;
+    height:600px;
+}
+.searchbar{
+    margin-top:50px;
+}
