@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group" style="margin-top: 50px;">
                     <div class="col-md-4 col-md-offset-8">
-                        <button type="submit" class="btn btn-default" style="width:80px;">登录</button>
+                        <button type="submit" class="btn btn-primary" style="width:80px;">登录</button>
                     </div>
                 </div>
                 <div class="row" style="margin-top:160px;">
