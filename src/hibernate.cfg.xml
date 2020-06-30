@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/boot_crm?serverTimezone=GMT</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">123456</property>
+    <property name="connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+
+    <property name="hibernate.c3p0.min_size">2</property>
+    <property name="hibernate.c3p0.max_size">5</property>
+    <property name="hibernate.c3p0.timeout">300</property>
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <property name="hibernate.c3p0.idle_test_period">3000</property>
+    <property name="connection.autocommit">true</property>
+    <!-- hibernate的方言(告知链接的数据库类型MySQL为例) -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="format_sql">true</property>
+    <property name="show_sql">true</property>
+
+    <mapping class="com.crm.entity.sysuser.CustomerEntity"/>
+    <mapping class="com.crm.entity.sysuser.BaseDictEntity"/>
+    <mapping class="com.crm.entity.sysuser.SysUserEntity"/>
+    <mapping resource="com/crm/entity/sysuser/CustomerEntity.hbm.xml"/>
+
+    <mapping resource="com/crm/entity/sysuser/BaseDictEntity.hbm.xml"/>
+    <mapping resource="com/crm/entity/sysuser/CustomerEntity.hbm.xml"/>
+    <mapping resource="com/crm/entity/sysuser/SysUserEntity.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

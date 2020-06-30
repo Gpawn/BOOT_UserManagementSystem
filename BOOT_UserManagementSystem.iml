@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web/WEB-INF" relative="/" />
+        </webroots>
+      </configuration>
+      <facet type="Struts2" name="Struts 2">
+        <configuration>
+          <fileset id="s2fileset" name="My Fileset" removed="false">
+            <file>file://$MODULE_DIR$/src/struts.xml</file>
+            <file>jar://$MODULE_DIR$/web/WEB-INF/libs/struts2-convention-plugin-2.3.24.jar!/struts-plugin.xml</file>
+            <file>jar://$MODULE_DIR$/web/WEB-INF/libs/struts2-core-2.3.24.jar!/struts-default.xml</file>
+            <file>file://$MODULE_DIR$/src/struts-user.xml</file>
+          </fileset>
+          <propertiesKeys disabled="false" />
+        </configuration>
+      </facet>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="hibernate.cfg.xml" value="e27010c8-3829-47dc-b2cf-eac1b29f3804" />
+          <unit-entry name="sessionFactory" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
+    <output-test url="file://$MODULE_DIR$/web/WEB-INF/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.29" level="application_server_libraries" />
+    <orderEntry type="library" name="sshAll" level="project" />
+    <orderEntry type="library" name="struts2-convention-plugin-2.3.24" level="project" />
+    <orderEntry type="library" name="xwork-core-2.3.24" level="project" />
+    <orderEntry type="library" name="asm-3.3" level="project" />
+  </component>
+</module>
