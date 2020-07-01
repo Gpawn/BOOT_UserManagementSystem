@@ -2,27 +2,31 @@
 <html>
 <head>
     <title>客户管理页面</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/crm.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-<script src="../js/jquery-3.5.1.min.js"></script>
+
 <script>
     $(document).ready(function(){
         $('.dropdown').mouseenter(function(){
             $(this).children('ul').show();
         });
         $('.dropdown').mouseleave(function(){
-           $(this).children('ul').hide()
+           $(this).children('ul').hide();
         });
     })
 </script>
-    <div class="container-fluid" style="height:500px;">
+    <div class="container-fluid">
         <div class="row bar">
             <div class="col-xs-3">
                 <h4 class="ver">BOOT客户管理系统v1.0</h4>
             </div>
+            <!-- 下拉菜单 -->
             <div class="col-xs-3 col-xs-offset-6">
                 <ul class="nav nav-pills ver">
                     <li role="presentation" class="dropdown">
@@ -84,6 +88,7 @@
         </div>
         <div class="row">
             <div class="col-xs-4 leftbox">
+                <!-- 查询框 -->
                 <div class="row searchbar">
                     <div class="input-group" style="width:80%;margin-left:10%;">
                         <input type="text" class="form-control" placeholder="查询内容">
@@ -92,6 +97,7 @@
                         </span>
                     </div>
                 </div>
+                <!-- 功能模块 -->
                 <div class="row" style="margin-top:50px;">
                     <div class="list-group">
                         <a href="#" class="list-group-item active glyphicon glyphicon-th-list">
@@ -111,28 +117,28 @@
                     <form class="form-inline" style="border:#f7f7f7 1px solid;padding:10px;border-radius: 3px;">
                         <div class="form-group">
                             <label>客户名称：</label>
-                            <input type="text" class="form-control" id="custName" style="width:150px;">
+                            <input type="text" class="form-control" id="custName" style="width:180px;">
                         </div>
                         <div class="form-group">
                             <label>客户来源：</label>
-                            <select class="form-control" style="width:100px;">
-                                <option value=""></option>
+                            <select class="form-control" style="width:120px;">
+                                <option value="" selected>--请选择--</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>所属行业：</label>
-                            <select class="form-control" style="width:100px;">
-                                <option value=""></option>
+                            <select class="form-control" style="width:120px;">
+                                <<option value="" selected>--请选择--</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>客户级别：</label>
-                            <select class="form-control" style="width:100px;">
-                                <option value=""></option>
+                            <select class="form-control" style="width:120px;">
+                                <option value="" selected>--请选择--</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
                             </select>
@@ -141,7 +147,7 @@
                     </form>
                 </div>
                 <div class="row center-block">
-                    <button class="btn btn-primary">新建</button>
+                    <button class="btn btn-primary" id="create" data-toggle="modal" data-target="#createM">新建</button>
                 </div>
                 <div class="row center-block" style="height:586px;">
                     <table align="center" class="table table-striped table-bordered">
@@ -168,8 +174,8 @@
                             <td>6</td>
                             <td>7</td>
                             <td>
-                                <button class="btn btn-primary">修改</button>
-                                <button class="btn btn-danger">删除</button>
+                                <button class="btn btn-primary" id="update" data-toggle="modal" data-target="#updateM">修改</button>
+                                <button class="btn btn-danger" id="delete" data-toggle="modal" data-target="#deleteMe">删除</button>
                             </td>
                         </tr>
 
@@ -208,6 +214,196 @@
                             </ul>
                         </nav>
                     </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 新建功能遮罩层 -->
+    <div class="modal fade" tabindex="-1" id="deleteMe" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="deleteModal">删除客户信息</h4>
+                </div>
+                <div class="modal-body">
+                    确定要删除吗？
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改功能遮罩层 -->
+    <div class="modal fade" tabindex="-1" id="updateM" role="dialog" aria-labelledby="updateModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="updateModal">修改客户信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">客户名称：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">客户来源：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="" selected>--请选择--</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">所属行业：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="" selected>--请选择--</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">客户级别：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="" selected>--请选择--</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">联系人：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="联系人">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">固定电话：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="固定电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">移动电话：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="移动电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">邮政编码：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="邮政编码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">联系地址：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="联系地址">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-primary">保存修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 删除功能遮罩层 -->
+    <div class="modal fade" tabindex="-1" id="deleteM" role="dialog" aria-labelledby="createModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="createModal">创建客户信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">客户名称：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">客户来源：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="" selected>--请选择--</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">所属行业：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="" selected>--请选择--</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">客户级别：</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="" selected>--请选择--</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;" >联系人：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="联系人">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">固定电话：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="固定电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">移动电话：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="移动电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">邮政编码：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="邮政编码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="padding-right:0px;">联系地址：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="联系地址">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-primary">创建客户</button>
                 </div>
             </div>
         </div>

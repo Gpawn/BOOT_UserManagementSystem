@@ -22,3 +22,11 @@
 .searchbar{
     margin-top:50px;
 }
+.toast{
+    width:400px;
+    height:400px;
+    background: black; !important;
+    border-radius: 8px;
+    position: relative;
+    z-index:1;
+}
