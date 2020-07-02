@@ -1,8 +1,14 @@
 package com.crm.dao;
 
+import com.crm.entity.sysuser.CustomerEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HibernateSessionFactory {
 
@@ -107,5 +113,7 @@ public class HibernateSessionFactory {
     public static Configuration getConfiguration() {
         return configuration;
     }
+
+
 
 }

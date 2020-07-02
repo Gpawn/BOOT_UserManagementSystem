@@ -7,7 +7,7 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/web/WEB-INF" relative="/" />
+          <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
       </configuration>
       <facet type="Struts2" name="Struts 2">
@@ -16,7 +16,6 @@
             <file>file://$MODULE_DIR$/src/struts.xml</file>
             <file>jar://$MODULE_DIR$/web/WEB-INF/libs/struts2-convention-plugin-2.3.24.jar!/struts-plugin.xml</file>
             <file>jar://$MODULE_DIR$/web/WEB-INF/libs/struts2-core-2.3.24.jar!/struts-default.xml</file>
-            <file>file://$MODULE_DIR$/src/struts-user.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
@@ -33,7 +32,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="e27010c8-3829-47dc-b2cf-eac1b29f3804" />
-          <unit-entry name="sessionFactory" />
+          <unit-entry name="sessionFactory" value="556ade8a-ebc0-440c-bdff-50d4628d3f97" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />

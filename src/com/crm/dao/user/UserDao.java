@@ -7,17 +7,13 @@ public class UserDao extends DaoHibernate<SysUserEntity> {
 	public SysUserEntity findByNameAndPassword(SysUserEntity user) {
 		String hql="from SysUserEntity u where u.userCode=?0 and u" +
 				".userPassword=?1";
-		System.out.println("==============================");
-		System.out.println("\n userCode:"+user.getUserCode()+" user_password" +
-				":"+user.getUserPassword()+"\n");
-		System.out.println("==============================");
 		String param[]= {user.getUserCode(),user.getUserPassword()};
 
 		SysUserEntity user1=this.findOne(hql,param);
 		return user1;
 	}
 	public SysUserEntity findByName(SysUserEntity user) {
-		String hql="from User u where u.username=?0";
+		String hql="from CustomerEntity u where u.user_Name=?0";
 		String param[]= {user.getUserCode()};
 		SysUserEntity user1=this.findOne(hql, param);
 		return user1;

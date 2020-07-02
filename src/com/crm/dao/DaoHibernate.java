@@ -1,13 +1,21 @@
 package com.crm.dao;
 
+import com.crm.entity.sysuser.CustomerEntity;
 import com.crm.utils.HibernateUtil;
+import com.crm.utils.PageBean;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.List;
 
 public class DaoHibernate<T> implements IBaseDao<T>{
+    @Resource
+    private SessionFactory sessionFactory;
+
 	public int insert(T o) {
 		Session s=null;
 		Transaction tx=null;
@@ -210,4 +218,5 @@ public class DaoHibernate<T> implements IBaseDao<T>{
 			HibernateUtil.closeSession();
 		}
 	}
+
 }

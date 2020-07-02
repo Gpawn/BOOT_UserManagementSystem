@@ -8,8 +8,7 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.devMode" value="true" />
     <constant name="struts.objectFactory" value="spring"></constant>
-    <include file="struts-user.xml"></include>
-    <include file="struts-default.xml"></include>
     <include file="struts-plugin.xml"></include>
+    <include file="struts-default.xml"></include>
 
 </struts>

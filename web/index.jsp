@@ -10,6 +10,7 @@
 <html>
   <body>
   <h1>nihao</h1>
-  <c:redirect url="WEB-INF/jsp/user/login.jsp"/>
+<%--<  <c:redirect url="WEB-INF/jsp/login.jsp"/>>--%>
+  <h1>This is index.jsp</h1>
   </body>
 </html>

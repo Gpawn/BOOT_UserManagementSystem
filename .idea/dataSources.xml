@@ -17,5 +17,34 @@ E:/SoftWokeSpace/IDEAWorkSpace/LastLable/BOOT_UserManagementSystem/src/hibernate
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/boot_crm?serverTimezone=GMT</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="sessionFactory/Hibernate" uuid="9cda52f5-92f3-439b-8837-e26598d21a63">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+E:/SoftWokeSpace/IDEAWorkSpace/LastLable/BOOT_UserManagementSystem/src/applicationContext.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/boot_crm?serverTimezone=GMT</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="dataSource" uuid="556ade8a-ebc0-440c-bdff-50d4628d3f97">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>c3p0
+
+E:/SoftWokeSpace/IDEAWorkSpace/LastLable/BOOT_UserManagementSystem/src/applicationContext.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql:///boot_crm</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="db" uuid="e3b72169-ed59-4d2d-9bee-8e12f4c2e13a">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>jdbc.properties
+
+E:/SoftWokeSpace/IDEAWorkSpace/LastLable/BOOT_UserManagementSystem/src/db.properties</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+    </data-source>
   </component>
 </project>

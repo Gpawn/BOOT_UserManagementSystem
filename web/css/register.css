@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    background: url("../images/bg.jpg") no-repeat center 0px;
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+.block{
+    width:80%;
+    height:600px;
+    margin-top:100px;
+
+}
+.topblock{
+    height:100px;
+    background: #ffffff;
+    color: #0f0f0f;
+    filter:alpha(Opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    box-shadow:#5e5e5e 10px 10px 10px;
+}
+.bottomblock{
+    background: #474A59;
+    color: #A9B2BA;
+    box-shadow: #000000 0px 0px 10px;
+    height:400px;
+}

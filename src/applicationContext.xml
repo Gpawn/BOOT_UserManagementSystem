@@ -28,6 +28,11 @@
                   value="classpath:hibernate.cfg.xml"></property>
         <property name="mappingLocations"
                   value="classpath:com/crm/entity/*/*.hbm.xml"/>
+        <property name="packagesToScan">
+            <list>
+                <value>com.crm.entity.sysuser</value>
+            </list>
+        </property>
 
 
     </bean>
