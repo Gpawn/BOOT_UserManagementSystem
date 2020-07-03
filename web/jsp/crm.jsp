@@ -10,7 +10,9 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<%
+    request.setCharacterEncoding("utf-8");
+%>
 <script>
     $(document).ready(function(){
         $('.dropdown').mouseenter(function(){
@@ -114,10 +116,10 @@
                     <h1>客户管理</h1>
                 </div>
                 <div class="row center-block">
-                    <form class="form-inline" style="border:#f7f7f7 1px solid;padding:10px;border-radius: 3px;">
+                    <form action="" class="form-inline" style="border:#f7f7f7 1px solid;padding:10px;border-radius: 3px;">
                         <div class="form-group">
                             <label>客户名称：</label>
-                            <input type="text" class="form-control" id="custName" style="width:180px;">
+                            <input type="text" name="custName" class="form-control" id="custName" style="width:180px;">
                         </div>
                         <div class="form-group">
                             <label>客户来源：</label>
@@ -143,7 +145,7 @@
                                 <option value="">2</option>
                             </select>
                         </div>
-                        <div class="btn btn-primary">查询</div>
+                        <input class="btn btn-primary" type="submit" value="查询">
                     </form>
                 </div>
                 <div class="row center-block">
@@ -219,7 +221,7 @@
         </div>
 
     </div>
-    <!-- 新建功能遮罩层 -->
+    <!-- 删除功能遮罩层 -->
     <div class="modal fade" tabindex="-1" id="deleteMe" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -323,8 +325,8 @@
         </div>
     </div>
 
-    <!-- 删除功能遮罩层 -->
-    <div class="modal fade" tabindex="-1" id="deleteM" role="dialog" aria-labelledby="createModal" aria-hidden="true">
+    <!-- 新建功能遮罩层 -->
+    <div class="modal fade" tabindex="-1" id="createM" role="dialog" aria-labelledby="createModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
